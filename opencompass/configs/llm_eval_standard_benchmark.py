@@ -134,19 +134,19 @@ deepseek_r1 = [
         max_out_len=40960,                   # 最大输出长度
         max_seq_len=40960,                   # 最大输入长度
         temperature=0.7,                   # 生成温度
-        batch_size=1,                       # 批处理大小
+        batch_size=8,                       # 批处理大小
         retry=3,                            # 重试次数
         run_cfg=dict(num_gpus=0),                # 资源需求（不需要 GPU）
     )
 ]
 models = deepseek_r1
 
-# no start ❌
+# doing 🚀
 # qwen3_235b_a22b_fp8 = [
 #     dict(
 #         abbr="Qwen3-235B-A22B-FP8",
 #         type=OpenAISDK,
-#         path="qwen3-235b-a22b-fp8",               # 请求服务时的 model name
+#         path="qwen3-235b-a22b-fp8-local-II",               # 请求服务时的 model name
 #         key=internlm_api_key,
 #         openai_api_base=internlm_url,
 #         rpm_verbose=True,                   # 是否打印请求速率
